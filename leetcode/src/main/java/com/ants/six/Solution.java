@@ -21,7 +21,9 @@ public class Solution {
         if (s == null || s.length() < 0) {
             return "";
         }
-        if (numRows == 1) {return s};
+        if (numRows == 1) {
+            return s;
+        } ;
         StringBuilder[] array = new StringBuilder[numRows];
         for (int init = 0; init < array.length; init++) {
             array[init] = new StringBuilder();
@@ -55,7 +57,9 @@ public class Solution {
         boolean goingDown = false;
         for (char c : s.toCharArray()) {
             rows.get(curRow).append(c);
-            if (curRow == 0 || curRow == numRows - 1) goingDown = !goingDown;
+            if (curRow == 0 || curRow == numRows - 1) {
+                goingDown = !goingDown;
+            }
             curRow += goingDown ? 1 : -1;
 
         }
